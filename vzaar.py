@@ -272,7 +272,7 @@ class Vzaar(object):
 
         response, body = self._make_call('videos', method="POST",
                 post_data=post_data)
-        self._assert_status(response, body, '201')
+        self._assert_status(response, body)
 
         return self._parse_xml(body, ['video'])
 
